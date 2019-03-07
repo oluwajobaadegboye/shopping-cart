@@ -1,0 +1,11 @@
+applications:
+  - name: product-service
+    path: target/product-service.jar
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    memory: 500M
+    domain: cfapps.io
+    instances: 1
+    services:
+      - productdb
+      - service-registry
+      - circuit-breaker
