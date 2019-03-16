@@ -1,10 +1,11 @@
-package com.shoppingcart.userservice.config;
+package com.shoppingcart.userservice.dto;
 
-public class LoginToken{
+public class JwtAuthenticationResponse {
     private String accessToken;
-    private String tokenType;
+    private String tokenType = "Bearer";
 
-    public LoginToken() {
+    public JwtAuthenticationResponse(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     public String getAccessToken() {

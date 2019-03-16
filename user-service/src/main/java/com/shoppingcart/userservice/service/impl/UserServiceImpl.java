@@ -1,7 +1,7 @@
 package com.shoppingcart.userservice.service.impl;
 
-import com.shoppingcart.userservice.config.LoginToken;
 import com.shoppingcart.userservice.dto.LoginRequest;
+import com.shoppingcart.userservice.dto.LoginToken;
 import com.shoppingcart.userservice.model.User;
 import com.shoppingcart.userservice.repository.UserRepository;
 import com.shoppingcart.userservice.service.UserService;

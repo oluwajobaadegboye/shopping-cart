@@ -19,15 +19,17 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args) {
-        loadDefaultRoles();
+        saveDefaultRoles();
     }
 
-    private void loadDefaultRoles(){
-        if(!roleRepository.existsByName(RoleName.ROLE_USER)){
-            roleRepository.save(new Role(RoleName.ROLE_USER));
-        }
-        if(!roleRepository.existsByName(RoleName.ROLE_ADMIN)){
-            roleRepository.save(new Role(RoleName.ROLE_ADMIN));
+    private void saveDefaultRoles(){
+        saveRole(RoleName.ROLE_USER);
+        saveRole(RoleName.ROLE_ADMIN);
+    }
+
+    private void saveRole(RoleName roleName){
+        if(!roleRepository.existsByName(roleName)){
+            roleRepository.save(new Role(roleName));
         }
     }
 }

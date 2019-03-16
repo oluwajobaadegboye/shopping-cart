@@ -1,5 +1,8 @@
 package com.shoppingcart.userservice.config;
 
+import com.shoppingcart.userservice.filter.JwtAuthenticationFilter;
+import com.shoppingcart.userservice.security.JwtAuthenticationEntryPoint;
+import com.shoppingcart.userservice.service.impl.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +27,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
         prePostEnabled = true
 )
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
     @Autowired
     CustomUserDetailsService customUserDetailsService;
 

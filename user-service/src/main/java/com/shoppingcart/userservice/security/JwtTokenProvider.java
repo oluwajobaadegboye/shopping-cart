@@ -1,6 +1,5 @@
-package com.shoppingcart.userservice.config;
+package com.shoppingcart.userservice.security;
 
-import com.sun.security.auth.UserPrincipal;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

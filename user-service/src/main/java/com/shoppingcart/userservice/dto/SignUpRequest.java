@@ -3,8 +3,7 @@ package com.shoppingcart.userservice.dto;
 import com.shoppingcart.userservice.model.Role;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty; 
 import javax.validation.constraints.Size;
 
 public class SignUpRequest {
@@ -60,11 +59,11 @@ public class SignUpRequest {
         this.password = password;
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }
