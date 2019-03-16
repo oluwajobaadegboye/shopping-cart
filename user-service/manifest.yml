@@ -1,9 +1,9 @@
 applications:
-  - name: gmd-spring-boot
-    path: target/gmd-spring-boot.jar
+  - name: cart-user-service
+    path: target/user-service.jar
     buildpack: https://github.com/cloudfoundry/java-buildpack.git
     memory: 1G
     domain: cfapps.io
     instances: 1
     services:
-      - gmddb
+      - userdb
