@@ -1,10 +1,12 @@
 package com.shoppingcart.userservice.dto;
 
 import com.shoppingcart.userservice.model.Role;
+import com.shoppingcart.userservice.model.RoleName;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty; 
 import javax.validation.constraints.Size;
+import java.util.List;
 
 public class SignUpRequest {
 
@@ -22,7 +24,7 @@ public class SignUpRequest {
     @Size(max = 100)
     private String password;
     @NotEmpty
-    private  String  role;
+    private List<RoleName> roles;
 
     public SignUpRequest() {
     }
@@ -59,11 +61,11 @@ public class SignUpRequest {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public List<RoleName> getRoles() {
+        return roles;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoles(List<RoleName> roles) {
+        this.roles = roles;
     }
 }

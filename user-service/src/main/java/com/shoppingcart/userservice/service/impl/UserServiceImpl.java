@@ -23,4 +23,14 @@ public class UserServiceImpl implements UserService {
     public LoginToken login(LoginRequest loginRequest) {
         return null;
     }
+
+    @Override
+    public boolean existsByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
 }
